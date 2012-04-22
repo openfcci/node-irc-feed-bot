@@ -11,36 +11,38 @@ the feed.
 
 Node.js and npm must be installed on your server.
 
+
+# Install
+
+  Clone or fork this repo.
+
+  `npm install` will download the bot's dependencies.
+
+
 # Usage
 
+First, you must set up your bot by telling it where the server is
+located, what its name is and what channels it should enter.
+
 ```
-
-var FEEDSUB = require('feedsub');
-var IRC = require('irc');
-
 client = new IRC.Client('irc.example.com', 
                         'Feed-bot', // Name your bot 
                         {
                         channels: ['#testing', '#the-serious-room'],
 });
 
+```
+
+Next, you'll need to give your bot a feed to watch and tell it how often
+to check the feed. **Note:** When first launching the bot, it can be
+pretty noisy, because all items in the feed are new to it.
+
+```
 reader = new FEEDSUB('http://example.com/atom.xml', {
   interval: 10, // check feed every ten minutes
   autoStart: true,
 });
 
-reader.on('item', function(item) {
-  console.dir(item.title);
-  client.say(client.channels, item.title + ': ' + item.id);
-});
-
 ```
 
-# Install
-
-  npm install
-
-
-
-
-
+Once the bot is set up, run `node notify.js` to start it.
