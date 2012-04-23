@@ -45,12 +45,6 @@ Once the bot is set up, run `node notify.js` to start it.
 
 The bot recognizes the following commands, sent over private message.
 
-* die
-* quiet
-* noisy
-* join
-* part
-
 `die` tells the bot to part from all channels it is in.
 
 `quiet` tells the bot to stop notifying channels, by not checking the
