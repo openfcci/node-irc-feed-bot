@@ -21,7 +21,6 @@ reader = new FEEDSUB(feed, {
 });
 
 reader.on('item', function(item) {
-  var first
   client.say(channels, item.title + ': ' + item.link);
   console.dir(item.title);
 });
