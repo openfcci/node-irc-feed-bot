@@ -3,7 +3,7 @@ var IRC = require('irc');
 
 
 // Set up your little spambot
-var server    = 'sobby.fccinteractive.com';
+var server    = 'irc.fccinteractive.com';
 var bot       = 'feed-bot';
 var channels   = ['#testing', '#testing2'];
 var feed      = 'http://rss.cnn.com/rss/cnn_latest.rss';
