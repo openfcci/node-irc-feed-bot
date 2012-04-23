@@ -25,7 +25,7 @@ First, you must set up your bot by telling it where the server is
 located, what its name is and what channels it should enter.
 
 ```
-var server    = 'sobby.fccinteractive.com';
+var server    = 'irc.fccinteractive.com';
 var bot       = 'feed-bot';
 var channels   = ['#testing', '#testing2'];
 ```
