@@ -36,7 +36,7 @@ pretty noisy, because all items in the feed are new to it.
 
 ```
 var feed      = 'http://rss.cnn.com/rss/cnn_latest.rss';
-var interval  = 1 // how often to poll the feed?
+var interval  = 1 // how often to poll the feed, in minutes?
 ```
 
 Once the bot is set up, run `node notify.js` to start it.

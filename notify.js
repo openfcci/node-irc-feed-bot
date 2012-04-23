@@ -7,7 +7,7 @@ var server    = 'irc.fccinteractive.com';
 var bot       = 'feed-bot';
 var channels   = ['#testing', '#testing2'];
 var feed      = 'http://rss.cnn.com/rss/cnn_latest.rss';
-var interval  = 1 // how often to poll the feed?
+var interval  = 1 // how often to poll the feed, in minutes?
 
 
 client = new IRC.Client(server, bot,
