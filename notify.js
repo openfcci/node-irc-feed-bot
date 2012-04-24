@@ -12,7 +12,8 @@ var interval  = 1 // how often to poll the feed, in minutes?
 
 client = new IRC.Client(server, bot,
                         {
-                          channels: channels 
+                          channels: channels,
+                          realName: 'nodejs IRC bot',
                         });
 
 reader = new FEEDSUB(feed, {
@@ -25,6 +26,8 @@ reader.on('item', function(item) {
   console.dir(item.title);
 });
 
+
+// Todo: some nodejs callback soup
 client.addListener('pm', function(from, message) {
   console.log('PM from %s => %s', from, message);
 
