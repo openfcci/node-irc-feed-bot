@@ -29,13 +29,13 @@ reader.on('item', function(item) {
   console.dir(item.title);
 });
 
-/*
-client.addListener('message', function (nick, to, text, message) {
-  if (message.match('/' + bot + ' help/i')) {
-    client.say('RTFM, ' + nick + ': https://github.com/openfcci/node-irc-feed-bot/blob/master/README.md');
+
+client.addListener('message', function (nick, to, text) {
+  if (text.match(bot + ' help')) {
+    client.say(to, 'RTFM, ' + nick + ': https://github.com/openfcci/node-irc-feed-bot/blob/master/README.md');
   }
 });
-*/
+
 
 
 // Send the bot private messages to command it.
@@ -65,11 +65,4 @@ client.addListener('pm', function (from, message) {
     client.part(channel);
   }
 });
-
-
-/* error logging
-reader.on('error', function (err) {
-  console.dir(err);
-});
-*/
 
