@@ -2,7 +2,7 @@
   "name": "Notify-bot",
   "description": "A little IRC spambot",
   "keywords": ["irc", "rss", "atom", "bot"],
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Zac Echola",
 
   "dependencies": {
