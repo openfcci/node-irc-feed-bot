@@ -36,7 +36,11 @@ client.addListener('message', function (nick, to, text, message) {
   }
 )};
 
-// Todo: some nodejs callback soup
+
+
+// Send the bot private messages to command it.
+// Todo: administrator privs, nodejs callback soup
+
 client.addListener('pm', function (from, message) {
   console.log('PM from %s => %s', from, message);
 
@@ -61,3 +65,11 @@ client.addListener('pm', function (from, message) {
     client.part(channel);
   }
 });
+
+
+// error logging
+reader.on('error', function (err) {
+  console.dir(err);
+});
+
+
