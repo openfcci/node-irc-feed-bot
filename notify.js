@@ -14,13 +14,14 @@ client = new IRC.Client(server, bot,
                         {
                           channels: channels,
                           realName: 'nodejs IRC bot',
+                          autoRejoin: true,
+                          autoConnect: true,
                         });
 
 reader = new FEEDSUB(feed, {
   interval: interval,
   autoStart: true,
-  autoRejoin: true,
-  autoConnect: true,
+
 });
 
 reader.on('item', function(item) {
