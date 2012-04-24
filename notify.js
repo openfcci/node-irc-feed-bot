@@ -5,7 +5,7 @@ var IRC = require('irc');
 // Set up your little spambot
 var server    = 'irc.fccinteractive.com';
 var bot       = 'feed-bot';
-var channels   = ['#testing', '#testing2'];
+var channels  = ['#testing', '#testing2'];
 var feed      = 'http://rss.cnn.com/rss/cnn_latest.rss';
 var interval  = 1 // how often to poll the feed, in minutes?
 
