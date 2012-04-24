@@ -38,13 +38,13 @@ client.addListener('pm', function(from, message) {
   if (message.match(/noisy/i)) {
       reader.interval = 1;
   }
-  if (message.match(/join #+[a-zA-z0-9\-\?.]+$/i)) {
-    var channel = message.match(/#+[a-zA-z0-9\-\?.]+$/).toString();
+  if (message.match(/join #+[A-z0-9\-\?.]+$/i)) {
+    var channel = message.match(/#+[A-z0-9\-\?.]+$/).toString();
     console.log('Joining ' + channel);
     client.join(channel);
   }
-  if (message.match(/part #+[a-zA-z0-9\-\?.]+$/i)) {
-    var channel = message.match(/#+[a-zA-z0-9\-\?.]+$/).toString();
+  if (message.match(/part #+[A-z0-9\-\?.]+$/i)) {
+    var channel = message.match(/#+[A-z0-9\-\?.]+$/).toString();
     console.log('Parting ' + channel);
     client.part(channel);
   }
