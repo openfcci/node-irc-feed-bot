@@ -27,8 +27,14 @@ reader.on('item', function(item) {
 });
 
 
+client.addListener('message', function (nick, to, text, message) {
+  if (message.match('/' + bot + ' help/i') {
+    client.say('RTFM, ' + nick + ': https://github.com/openfcci/node-irc-feed-bot/blob/master/README.md');
+  }
+)};
+
 // Todo: some nodejs callback soup
-client.addListener('pm', function(from, message) {
+client.addListener('pm', function (from, message) {
   console.log('PM from %s => %s', from, message);
 
   if (message.match(/die/i)) {
