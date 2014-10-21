@@ -4,6 +4,8 @@ var IRC = require('irc');
 
 // Set up your little spambot
 var server    = 'irc.fccinteractive.com';
+var portNum   = 6667;
+var useSSL    = false;
 var bot       = 'feed-bot';
 var channels  = ['#testing', '#testing2'];
 var feed      = 'http://rss.cnn.com/rss/cnn_latest.rss';
@@ -16,6 +18,8 @@ client = new IRC.Client(server, bot,
                           realName: 'nodejs IRC bot',
                           autoRejoin: true,
                           autoConnect: true,
+                          port: portNum,
+                          secure: useSSL
                         });
 
 reader = new FEEDSUB(feed, {
